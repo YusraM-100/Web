@@ -1,0 +1,10 @@
+Header:
+navigation  gallery about feedback login pages
+-------------------------
+		|
+navigation	|
+		|	
+		|
+		|
+-------------------------
+footersocial media ...policy 
