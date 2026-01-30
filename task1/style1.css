@@ -1,0 +1,179 @@
+/* ================= GENERAL STYLES ================= */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+p {
+    font-size: 0.95rem;
+}
+
+/* ================= HEADER ================= */
+header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#logo {
+    width: 50px;
+    margin-right: 15px;
+}
+
+/* ================= NAVBAR ================= */
+#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background-color: #111;
+}
+
+#navbar li {
+    margin: 0 15px;
+}
+
+#navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Pseudo-classes */
+#navbar a:hover {
+    background-color: #ff4d6d;
+    border-radius: 4px;
+}
+
+#navbar a:active {
+    transform: scale(0.95);
+}
+
+#navbar a:focus {
+    outline: 2px solid #ff4d6d;
+}
+
+/* ================= GALLERY ================= */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.art-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.art-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.art-card:hover img {
+    transform: scale(1.1);
+}
+
+.art-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.art-card h3 {
+    margin: 10px 0 5px;
+}
+
+/* ================= INFO SECTIONS ================= */
+.info-section {
+    padding: 40px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* ================= FEEDBACK FORM ================= */
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.feedback-form button {
+    padding: 10px;
+    border: none;
+    background-color: #ff4d6d;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.feedback-form button:hover {
+    background-color: #e63950;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-icons i {
+    margin: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #ff4d6d;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+    }
+}
