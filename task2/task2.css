@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: rgba(88, 88, 48, 0.493);
+}
+
+.container {
+    position: relative;
+    width: 600px;
+    background-color: beige;
+    height: 100px;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
+@keyframes hoverGlow {
+    0% {
+        background-color: rgb(89, 25, 25);
+        transform: scale(1);
+    }
+    100% {
+        background-color: rgb(37, 103, 94);
+        transform: scale(1.1);
+    }
+}
+
+#box {
+    position: absolute;   /* MUST be absolute */
+    width: 50px;
+    height: 50px;
+    background-color: rgb(207, 74, 3);
+    left: 0;
+    top: 25px;
+    transition: all 0.3s ease;
+}
+
+#box:hover {
+    animation: hoverGlow 0.6s ease-in-out forwards;
+}
